@@ -28,23 +28,24 @@ private Carro carro;
         this.barra1 = barra1;
         this.barra2 = barra2;
     }
-    
+ 
 public void run(){
-    while(barra2.getMaximum() || barra1.getMaximum()){
+    while(barra2.getValue() < 100 && barra1.getValue() < 100){
         barra1.setValue(barra1.getValue() + velocidad1);
         barra2.setValue(barra2.getValue() + velocidad2);
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
         } catch (Exception e) {
         }
     }
-    if(barra1.getValue() == 100 || barra2.getValue() == 100){
-        if(barra1.getValue() == 100){
-            JOptionPane.showMessageDialog(barra1, "El ganador fue "+carro.getModelo()+ "con una velocidad de " +velocidad1);
-        }else if(barra2.getValue() == 100){
-            JOptionPane.showMessageDialog(barra2, "El ganador fue " +carro.getModelo()+"con una velocidad de " +velocidad2);
-        }
+    if(barra1.getValue() > barra2.getValue()){
+        JOptionPane.showMessageDialog(barra1, "Gano el Carro numero 1 con un tiempo de "+velocidad1+ " segundos");
+    }else if(barra2.getValue() > barra1.getValue()){
+        JOptionPane.showMessageDialog(barra1, "Gano el Carro numero 2 con un tiempo de "+velocidad2+ " segundos");
+    }else{
+        JOptionPane.showMessageDialog(barra1, "Hubo un Empate entre los 2 carros");
     }
+    
 }
 
     

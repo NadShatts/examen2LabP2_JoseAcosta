@@ -18,9 +18,10 @@ public class HiloCronometro extends Thread {
     private boolean corre;
     
     public void run(){
-        while(true){
+        while(corre){ 
             Date date = new Date();
             SimpleDateFormat s = new SimpleDateFormat("mm:ss");
+            
         }
     }
     

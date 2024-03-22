@@ -571,7 +571,8 @@ Carro c = (Carro) modelos.getSelectedItem();
 Carro cc = (Carro) modelos1.getSelectedItem();
 
 HiloProgressBar hilo = new HiloProgressBar(pg_barra1, pg_barra2, c.getVelocidad(), cc.getVelocidad());
-hilo.start();
+Thread hilos = new Thread(hilo);
+hilos.start();
 
     }//GEN-LAST:event_tf_iniciarMouseClicked
 
@@ -698,5 +699,5 @@ hilo.start();
     // End of variables declaration//GEN-END:variables
 static int pos;
 //Fila 3 -Asiento 9
-//Compasion ocupo 40 para pasar el lab xd
+//Compasion ocupo 40 para pasar el lab, compasion porfavor.... xd
 }
