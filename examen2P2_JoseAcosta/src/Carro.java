@@ -21,6 +21,10 @@ public class Carro  implements Serializable{
         this.modelo = modelo;
         this.velocidad = velocidad;
     }
+
+    public Carro() {
+    }
+    
     
      private static final long serialVersionUID = 444L;
 
