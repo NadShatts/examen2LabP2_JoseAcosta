@@ -50,7 +50,7 @@ public class Carro  implements Serializable{
 
     @Override
     public String toString() {
-        return modelo;
+        return marca;
     }
     
     
